@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".menu.CompannerosViajeActivity">
+
+    <TextView
+        android:id="@+id/tvCompañerosViajeTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:gravity="center"
+        android:text="@string/tvCompañerosViajeTitulo"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvCompañeroManolo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:padding="20dp"
+        android:text="@string/tvCompañeroManolo"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvCompañeroJuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:padding="20dp"
+        android:text="@string/tvCompañeroJuan"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvCompañeroPablo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:padding="20dp"
+        android:text="@string/tvCompañeroPablo"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.izv.igg.promul.garciagutierrez.interfazaerolinea">
+
+    <item
+        android:id="@+id/action_miCuenta"
+        android:orderInCategory="100"
+        android:title="@string/miCuenta"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/action_datosPersonales"
+                android:title="@string/datosPersonales"/>
+            <item
+                android:id="@+id/action_docuViaje"
+                android:title="@string/docuViaje"/>
+            <item
+                android:id="@+id/action_compañerosViaje"
+                android:title="@string/compañerosViaje"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_misViajes"
+        android:orderInCategory="100"
+        android:title="@string/misViajes"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_tarjetasEmbarque"
+        android:orderInCategory="100"
+        android:title="@string/tarjetasEmbarque"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_infoVuelo"
+        android:orderInCategory="100"
+        android:title="@string/infoVuelo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_valesRegalo"
+        android:orderInCategory="100"
+        android:title="@string/valesRegalo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_revistaVuelo"
+        android:orderInCategory="100"
+        android:title="@string/revistaVuelo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_terminosCondiciones"
+        android:orderInCategory="100"
+        android:title="@string/terminosCondiciones"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_centroDeAyuda"
+        android:orderInCategory="100"
+        android:title="@string/centroDeAyuda"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_contactarAerolinea"
+        android:orderInCategory="100"
+        android:title="@string/contactarAerolinea"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_politicaPrivacidad"
+        android:orderInCategory="100"
+        android:title="@string/politicaPrivacidad"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_configPrivacidad"
+        android:orderInCategory="100"
+        android:title="@string/configPrivacidad"
+        app:showAsAction="never" />
+
+</menu>

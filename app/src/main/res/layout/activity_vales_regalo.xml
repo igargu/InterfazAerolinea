@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".menu.ValesRegaloActivity">
+
+    <TextView
+        android:id="@+id/tvValesRegaloTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:gravity="center"
+        android:text="@string/tvValesRegaloTitulo"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvValeDesayuno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:padding="20dp"
+        android:text="@string/tvValeDesayuno"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvValeClaseTaichi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:padding="20dp"
+        android:text="@string/tvValeClaseTaichi"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvValePaseoBarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:padding="20dp"
+        android:text="@string/tvValePaseoBarca"
+        android:textSize="20sp" />
+
+</LinearLayout>

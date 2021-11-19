@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.izv.igg.promul.garciagutierrez.interfazaerolinea">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InterfazAerolinea">
+        <activity
+            android:name=".mainActivities.BillBuyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".menu.ConfigPrivacidadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".menu.PoliticaPrivacidadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".menu.ContactarAerolineaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.CentroDeAyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.TerminosCondicionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.RevistaVueloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.ValesRegaloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.InfoVueloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.MisViajesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.TarjetaEmbarqueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.CompannerosViajeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.DocuViajesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".menu.DatosPersonalesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".mainActivities.BillActivity"
+            android:exported="true" />
+        <activity
+            android:name=".mainActivities.BuyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".mainActivities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

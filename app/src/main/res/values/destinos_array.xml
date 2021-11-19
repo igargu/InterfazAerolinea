@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="destinos_array">
+        <item>Bangkok (Tailandia)</item>
+        <item>Ciudad Ho Chi Minh (Vietnam)</item>
+        <item>Seúl (Corea del Sur)</item>
+        <item>Shanghái (China)</item>
+        <item>Tokio (Japón)</item>
+        <item>Yakarta (Indonesia)</item>
+    </string-array>
+</resources>

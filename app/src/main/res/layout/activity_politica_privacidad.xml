@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".menu.PoliticaPrivacidadActivity">
+
+    <TextView
+        android:id="@+id/tvPoliticaPrivacidadTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:gravity="center"
+        android:text="@string/tvPoliticaPrivacidadTitle"
+        android:textColor="#000000"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tvPoliticaPrivacidad"
+        android:layout_width="wrap_content"
+        android:layout_height="458dp"
+        android:fontFamily="@font/im_fell_dw_pica"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/tvPoliticaPrivacidad"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btPoliticaPrivacidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="48dp"
+        android:text="@string/btPoliticaPrivacidad"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</LinearLayout>
