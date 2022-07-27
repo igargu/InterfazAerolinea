@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -101,10 +102,7 @@ public class BuyActivity extends AppCompatActivity {
                 ibConfirmar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        toast = Toast.makeText(context, "Compra realizada", Toast.LENGTH_SHORT);
-                        toastView = toast.getView();
-                        toastView.getBackground().setColorFilter(getResources().getColor(R.color.green), PorterDuff.Mode.SRC_IN);
-                        toast.show();
+                        showToast("Compra realizada");
                         dialog.cancel();
                         finish();
                         openBillActivity();
@@ -118,10 +116,7 @@ public class BuyActivity extends AppCompatActivity {
                 ibCancelar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        toast = Toast.makeText(context, "Compra cancelada", Toast.LENGTH_SHORT);
-                        toastView = toast.getView();
-                        toastView.getBackground().setColorFilter(getResources().getColor(R.color.main_color), PorterDuff.Mode.SRC_IN);
-                        toast.show();
+                        showToast("Compra cancelada");
                         dialog.cancel();
                         finish();
                         openMainActivity();
@@ -260,5 +255,19 @@ public class BuyActivity extends AppCompatActivity {
     private void openMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    /**
+     * Método que muestra un Toast personalizado
+     *
+     * @param message Mensaje que queremos que aparezca en el Toast
+     */
+    private void showToast(String message) {
+        Toast toast = new Toast(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
+        TextView tvToast = view.findViewById(R.id.tvMessage);
+        tvToast.setText(message);
+        toast.setView(view);
+        toast.show();
     }
 }

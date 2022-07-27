@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -142,11 +143,7 @@ public class MainActivity extends AppCompatActivity {
                      * Avisamos al usuario mediante un Toast.
                      */
                     if (!cbTerminos.isChecked()) {
-                        toast = Toast.makeText(context, "Debe aceptar los Términos y condiciones", Toast.LENGTH_SHORT);
-                        toastView = toast.getView();
-                        toastView.getBackground().setColorFilter(getResources().getColor(R.color.blue), PorterDuff.Mode.SRC_IN);
-                        TextView text = (TextView) view.findViewById(android.R.id.message);
-                        toast.show();
+                        showToast("Debe aceptar los Términos y condiciones");
                     } else {
                         /**
                          * Se controla que el lugar de origen y el de destino no sean iguales
@@ -154,11 +151,7 @@ public class MainActivity extends AppCompatActivity {
                          * Avisamos al usuario mediante un Toast.
                          */
                         if (spOrigen.getSelectedItem().toString() == spDestino.getSelectedItem().toString()) {
-                            toast = Toast.makeText(context, "El lugar de origen y el de destino no pueden ser el mismo", Toast.LENGTH_SHORT);
-                            toastView = toast.getView();
-                            toastView.getBackground().setColorFilter(getResources().getColor(R.color.blue), PorterDuff.Mode.SRC_IN);
-                            TextView text = (TextView) view.findViewById(android.R.id.message);
-                            toast.show();
+                            showToast("El lugar de origen y el de destino no pueden ser el mismo");
                         } else {
                             withPremium = true;
                             finish();
@@ -213,11 +206,7 @@ public class MainActivity extends AppCompatActivity {
                      * Avisamos al usuario mediante un Toast.
                      */
                     if (!cbTerminos.isChecked()) {
-                        toast = Toast.makeText(context, "Debe aceptar los Términos y condiciones", Toast.LENGTH_SHORT);
-                        toastView = toast.getView();
-                        toastView.getBackground().setColorFilter(getResources().getColor(R.color.blue), PorterDuff.Mode.SRC_IN);
-                        TextView text = (TextView) view.findViewById(android.R.id.message);
-                        toast.show();
+                        showToast("Debe aceptar los Términos y condiciones");
                     } else {
                         /**
                          * Se controla que el lugar de origen y el de destino no sean iguales
@@ -225,11 +214,7 @@ public class MainActivity extends AppCompatActivity {
                          * Avisamos al usuario mediante un Toast.
                          */
                         if (spOrigen.getSelectedItem().toString() == spDestino.getSelectedItem().toString()) {
-                            toast = Toast.makeText(context, "El lugar de origen y el de destino no pueden ser el mismo", Toast.LENGTH_SHORT);
-                            toastView = toast.getView();
-                            toastView.getBackground().setColorFilter(getResources().getColor(R.color.blue), PorterDuff.Mode.SRC_IN);
-                            TextView text = (TextView) view.findViewById(android.R.id.message);
-                            toast.show();
+                            showToast("El lugar de origen y el de destino no pueden ser el mismo");
                         } else {
                             /**
                              * Iniciamos una determinada actividad según el dispositivo del usuario,
@@ -415,6 +400,20 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BillBuyActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    /**
+     * Método que muestra un Toast personalizado
+     *
+     * @param message Mensaje que queremos que aparezca en el Toast
+     */
+    private void showToast(String message) {
+        Toast toast = new Toast(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
+        TextView tvToast = view.findViewById(R.id.tvMessage);
+        tvToast.setText(message);
+        toast.setView(view);
+        toast.show();
     }
 
 }

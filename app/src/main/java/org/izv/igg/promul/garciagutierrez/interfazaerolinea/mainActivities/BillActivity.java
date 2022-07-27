@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -79,10 +80,7 @@ public class BillActivity extends AppCompatActivity {
                  * Mostramos un Toast agradeciendo la compra al usuario y le redirigimos a la
                  * actividad MainActivity.
                  */
-                toast = Toast.makeText(context, "Gracias por confiar en nosotros", Toast.LENGTH_SHORT);
-                toastView = toast.getView();
-                toastView.getBackground().setColorFilter(getResources().getColor(R.color.blue), PorterDuff.Mode.SRC_IN);
-                toast.show();
+                showToast("Gracias por confiar en nosotros");
                 finish();
                 openMainActivity();
             }
@@ -152,4 +150,17 @@ public class BillActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Método que muestra un Toast personalizado
+     *
+     * @param message Mensaje que queremos que aparezca en el Toast
+     */
+    private void showToast(String message) {
+        Toast toast = new Toast(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
+        TextView tvToast = view.findViewById(R.id.tvMessage);
+        tvToast.setText(message);
+        toast.setView(view);
+        toast.show();
+    }
 }
