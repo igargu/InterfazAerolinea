@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -36,11 +37,7 @@ public class ConfigPrivacidadActivity extends AppCompatActivity {
         btConfigPrivacidadAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toast = Toast.makeText(context, "Gracias por colaborar con nosotros", Toast.LENGTH_SHORT);
-                toastView = toast.getView();
-                toastView.getBackground().setColorFilter(getResources().getColor(R.color.blue), PorterDuff.Mode.SRC_IN);
-                TextView text = (TextView) view.findViewById(android.R.id.message);
-                toast.show();
+                showToast("Gracias por colaborar con nosotros");
                 finish();
             }
         });
@@ -55,5 +52,19 @@ public class ConfigPrivacidadActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Método que muestra un Toast personalizado
+     *
+     * @param message Mensaje que queremos que aparezca en el Toast
+     */
+    private void showToast(String message) {
+        Toast toast = new Toast(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
+        TextView tvToast = view.findViewById(R.id.tvMessage);
+        tvToast.setText(message);
+        toast.setView(view);
+        toast.show();
     }
 }
